@@ -1,12 +1,17 @@
 {
   "name": "cloudmine-runscope_radar",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "CloudMine Inc.",
   "summary": "Puppet module for Runscope Radar Agent",
   "license": "MIT",
   "source": "https://github.com/cloudmine/puppet-runscope_radar",
   "project_page": "https://github.com/cloudmine/puppet-runscope_radar",
   "issues_url": "https://github.com/cloudmine/puppet-runscope_radar/issues",
+  "tags": [
+    "monitoring",
+    "runscope",
+    "runscope-radar"
+  ],
   "dependencies": [
     {
       "name": "puppet/archive",
@@ -29,12 +34,6 @@
       "operatingsystemrelease": [
         "14.04"
       ]
-    }
-  ],
-  "requirements": [
-    {
-      "name": "puppet",
-      "version_requirement": "3.x"
     }
   ]
 }
