@@ -1,0 +1,13 @@
+description "Runscope Radar Agent"
+
+start on runlevel [2345]
+stop on runlevel [06]
+
+setuid <%= scope.lookupvar('runscope_radar::user') %>
+setgid <%= scope.lookupvar('runscope_radar::group') %>
+
+exec <%= scope.lookupvar('runscope_radar::install_dir') %>/<%= scope.lookupvar('runscope_radar::install_binary') %> -f <%= scope.lookupvar('runscope_radar::config_dir') %>/radar.conf
+
+respawn
+respawn limit 10 10
+kill timeout 10
